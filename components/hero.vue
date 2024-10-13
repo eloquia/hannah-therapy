@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShowBanner" class="w-full flex flex-col justify-center items-center pb-5 bg-amber-600">
+  <div v-if="isShowBanner" class="w-full flex flex-col justify-center items-center pb-5 bg-one-periwinkle-pink-300">
     <div class="w-full flex flex-row gap-4 justify-end">
       <UButton
         class="text-black"
@@ -11,20 +11,20 @@
       />
     </div>
 
-    <div>
-      <p class="text-slate-100">now accepting clients!</p>
-      <p class="text-slate-100">Click here to schedule</p>
+    <div @click="navigateToSchedule">
+      <p class="text-zinc-900">Now accepting clients!</p>
+      <p class="text-zinc-900">Click here to schedule</p>
     </div>
   </div>
 
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="font-kaushan text-3xl text-center">VIRTUAL THERAPY FOR ADULTS IN CALIFORNIA</h1>
-    <p class="text-center">Affordable treatment for those going through trouble with familiy, friends, anxiety, OCD, and just general life.</p>
-    <p>Hannah Thayer, LPCC</p>
+  <div class="flex flex-col justify-center items-center mt-16 px-8">
+    <h1 class="text-3xl text-center mb-4">VIRTUAL THERAPY FOR ADULTS IN CALIFORNIA</h1>
+    <p class="text-center mb-8">Affordable treatment for those going through trouble with familiy, friends, anxiety, OCD, and just general life.</p>
+    <p class="mb-16">Hannah Thayer, LPCC</p>
 
-    <NuxtImg src="/hannah-profile-photo.jpeg" sizes="300px md:400px" />
+    <NuxtImg class="mb-16" src="/hannah-profile-photo.jpeg" sizes="300px md:400px" />
 
-    <UButton class="justify-center py-4 px-16" label="Send" color="primary" variant="solid" />
+    <UButton class="justify-center py-4 px-16 bg-one-periwinkle-pink-300" label="Schedule a Consultation Call" variant="solid" @click="navigateToSchedule" />
   </div>
 </template>
 
@@ -37,6 +37,10 @@ const isShowBanner = ref(true);
 
 function handleCloseBanner() {
   isShowBanner.value = false;
+}
+
+function navigateToSchedule() {
+  console.log('navigateToSchedule')
 }
 
 </script>
