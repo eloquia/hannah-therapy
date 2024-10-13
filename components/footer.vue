@@ -1,7 +1,7 @@
 <template>
   <footer class="flex flex-col gap-16 mx-8 mt-16">
     <div class="flex flex-col gap-8">
-      <h2 class="text-xl">Contact</h2>
+      <h2 class="text-xl font-kaushan">Contact</h2>
 
       <UInput v-model="fullName" placeholder="First, Last Name" variant="outline" />
 

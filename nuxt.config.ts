@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/fonts',
+    ['@nuxtjs/google-fonts', {
+      families: {
+        Roboto: true,
+      },
+    }],
     '@nuxt/image',
   ],
 })

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Hero /> -->
+    <Hero />
     <!-- <BookComponent /> -->
     <Footer />
   </div>
