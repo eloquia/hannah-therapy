@@ -4,21 +4,38 @@
       <h2 class="text-xl font-kaushan">Contact</h2>
 
       <div class="flex flex-row gap-4">
-        <UInput v-model="firstName" class="w-1/2" placeholder="First Name" variant="outline" />
-        <UInput v-model="lastName" class="w-1/2" placeholder="Last Name" variant="outline" />
+        <UFormGroup label="First Name (required)" name="firstName" class="w-full">
+          <UInput v-model="firstName" variant="outline" />
+        </UFormGroup>
+
+        <UFormGroup label="Last Name (required)" name="lastName" class="w-full">
+          <UInput v-model="lastName" variant="outline" />
+        </UFormGroup>
       </div>
 
-      <UInput v-model="preferredName" placeholder="Preferred Name" variant="outline" />
+      <UFormGroup label="Preferred Name (optional)" name="preferredName" class="w-full">
+        <UInput v-model="preferredName" variant="outline" />
+      </UFormGroup>
 
-      <UInput v-model="emailAddress" placeholder="Email" variant="outline" />
+      <UFormGroup label="Email Address (required)" name="emailAddress" class="w-full">
+        <UInput v-model="emailAddress" placeholder="Email" variant="outline" />
+      </UFormGroup>
 
-      <UInput v-model="phoneNumber" placeholder="Phone Number" variant="outline" />
+      <UFormGroup label="Phone Number (optional)" name="phoneNumber" class="w-full">
+        <UInput v-model="phoneNumber" placeholder="Phone Number" variant="outline" />
+      </UFormGroup>
 
-      <UInputMenu v-model="selectedContactOption" :options="contactOptions" :popper="{ arrow: true }" />
+      <UFormGroup label="Preferred method of contact" name="selectedContactOption">
+        <USelectMenu v-model="selectedContactOption" :options="contactOptions" :popper="{ arrow: true }" />
+      </UFormGroup>
 
-      <UTextarea v-model="description" placeholder="Description" variants="outline" />
+      <UFormGroup label="Description (required)" name="description">
+        <UTextarea v-model="description" placeholder="Description" variants="outline" />
+      </UFormGroup>
 
-      <UTextarea v-model="daysAndTimes" placeholder="Preferred Days and Times" variants="outline" />
+      <UFormGroup label="Days and and Times (optional)" name="daysAndTimes">
+        <UTextarea v-model="daysAndTimes" placeholder="Preferred Days and Times" variants="outline" />
+      </UFormGroup>
 
       <div class="flex flex-col justify-center items-center w-full py-6 rounded bg-gray-300">
         <p>Recaptcha placeholder</p>
@@ -39,11 +56,11 @@
     </div>
 
     <div>
-      <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
-    </nav>
+      <nav class="flex flex-col gap-4">
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
+      </nav>
     </div>
 
     <div class="flex flex-col justify-center items-center gap-4 mb-16">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <HeroSection />
     <IntroSection />
     <StyleSection />
     <GoalsSection />
