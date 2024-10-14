@@ -1,5 +1,5 @@
 <template>
-  <div class="my-16 mx-8 ">
+  <div class="my-16 mx-8">
     <h2 class="mb-8 text-2xl">Style</h2>
 
     <p class="mb-8">The therapeutic approaches that I tend to use with clients is focused on CBT, DBT, ACT, and mindfulness/somatic based strategies. I enjoy challenging a client's mindset in order to help them gain more insight into how their thoughts and behavior patterns affect them both positively and negatively. I believe that all these approaches are a collaborative process between a client and therapist so that the client can eventually become their own therapist in to target their own needs and move towards their goals. </p>
