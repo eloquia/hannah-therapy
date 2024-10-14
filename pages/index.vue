@@ -6,6 +6,6 @@
     <GoalsSection />
     <DayOneSection />
     <!-- <BookComponent /> -->
-    <Footer />
+    <FooterSection />
   </div>
 </template>

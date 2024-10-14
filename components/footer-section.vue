@@ -1,21 +1,26 @@
 <template>
-  <footer class="flex flex-col gap-16 mx-8 mt-16">
+  <footer class="bg-slate-200 flex flex-col gap-16 px-8 pt-16">
     <div class="flex flex-col gap-8">
       <h2 class="text-xl font-kaushan">Contact</h2>
 
-      <UInput v-model="fullName" placeholder="First, Last Name" variant="outline" />
+      <div class="flex flex-row gap-4">
+        <UInput v-model="firstName" class="w-1/2" placeholder="First Name" variant="outline" />
+        <UInput v-model="lastName" class="w-1/2" placeholder="Last Name" variant="outline" />
+      </div>
 
       <UInput v-model="preferredName" placeholder="Preferred Name" variant="outline" />
 
+      <UInput v-model="emailAddress" placeholder="Email" variant="outline" />
+
       <UInput v-model="phoneNumber" placeholder="Phone Number" variant="outline" />
 
-      <UInput v-model="emailAddress" placeholder="Email" variant="outline" />
+      <UInputMenu v-model="selectedContactOption" :options="contactOptions" :popper="{ arrow: true }" />
 
       <UTextarea v-model="description" placeholder="Description" variants="outline" />
 
       <UTextarea v-model="daysAndTimes" placeholder="Preferred Days and Times" variants="outline" />
 
-      <div class="flex flex-col justify-center items-center w-full py-6 rounded bg-gray-200">
+      <div class="flex flex-col justify-center items-center w-full py-6 rounded bg-gray-300">
         <p>Recaptcha placeholder</p>
       </div>
 
@@ -28,7 +33,7 @@
         <p>Remote in California</p>
       </div>
 
-      <div class="w-1/2 bg-gray-200 py-6 flex justify-center">
+      <div class="w-1/2 bg-gray-300 py-6 flex justify-center">
         <p>logo</p>
       </div>
     </div>
@@ -46,12 +51,17 @@
 
 import { ref } from 'vue';
 
-const fullName = ref('');
+const contactOptions = ['Email', 'Phone Number'];
+
+const firstName = ref('');
+const lastName = ref('');
 const preferredName = ref('');
 const phoneNumber = ref('');
 const emailAddress = ref('');
 const description = ref('');
 const daysAndTimes = ref('');
+
+const selectedContactOption = ref(contactOptions[0])
 
 </script>
 
