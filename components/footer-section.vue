@@ -38,6 +38,14 @@
       </div>
     </div>
 
+    <div>
+      <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
+    </nav>
+    </div>
+
     <div class="flex flex-col justify-center items-center gap-4 mb-16">
       <p>Copyright © 2024 • Hannah Thayer</p>
 
