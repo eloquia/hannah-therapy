@@ -24,7 +24,7 @@
 
     <NuxtImg class="mb-16" src="/hannah-profile-photo.jpeg" sizes="300px md:400px" />
 
-    <UButton class="justify-center py-4 px-16 bg-one-periwinkle-pink-300" label="Schedule a Consultation Call" variant="solid" @click="navigateToSchedule" />
+    <UButton class="justify-center py-4 px-16 bg-one-periwinkle-pink-300 text-zinc-900" label="SCHEDULE CONSULTATION CALL" variant="solid" @click="navigateToSchedule" />
   </div>
 </template>
 
